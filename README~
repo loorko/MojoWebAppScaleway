@@ -1,0 +1,53 @@
+This is a simple Docker file and Mojolicious app
+
+It is inteded to be used as a starting point for Dockerising Perl Mojolicious applications
+
+The default port of 8080
+
+to build after cloning this repo:
+
+$	cd DockerMojo
+$ docker build -t mojo_app .
+
+$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+mojo_app            latest              982b597d1551        7 hours ago         360.9 MB
+ubuntu              14.04               03419f0ebb31        2 weeks ago         196.6 MB
+
+to initialy run:
+
+$ docker run -p 8080 -t -i --name mojo_app mojo_app
+or
+$ docker run -p 8080 -d -t -i --name mojo_app mojo_app
+
+$ docker inspect mojo_app
+...
+ "IPAddress": "172.17.0.2",
+...
+Write to the browser:
+172.17.0.2:8080
+
+see it running:
+
+$ docker ps
+CONTAINER ID        IMAGE                      COMMAND                CREATED             STATUS              PORTS                    NAMES
+bb91f7d6838a        mojo_app:latest   				 "/bin/sh -c 'hypnoto   2 minutes ago       Up 2 minutes        0.0.0.0:8080->8080/tcp   mojo_app     
+
+check on running processes:
+
+$ top mojo_app
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                14733               1886                0                   14:58               pts/20              00:00:00            /bin/sh -c hypnotoad -f script/my_app
+root                14773               14733               0                   14:58               pts/20              00:00:00            /srv/www/my_app/script/my_app
+root                14774               14773               0                   14:58               pts/20              00:00:00            /srv/www/my_app/script/my_app
+root                14775               14773               0                   14:58               pts/20              00:00:00            /srv/www/my_app/script/my_app
+root                14776               14773               0                   14:58               pts/20              00:00:00            /srv/www/my_app/script/my_app
+root                14777               14773               0                   14:58               pts/20              00:00:00            /srv/www/my_app/script/my_app
+
+stop the app running:
+
+$ docker stop  mojo_app
+
+start the app running again:
+
+$ docker start mojo_app

@@ -6,7 +6,7 @@ The default port of 8080
 
 to build after cloning this repo:
 
-$	cd DockerMojo
+$ cd DockerMojo
 $ docker build -t mojo_app .
 
 $ docker images
