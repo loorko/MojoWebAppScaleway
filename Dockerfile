@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install --yes \
 	libssh-dev \
 	perl
 RUN curl -s get.mojolicio.us | sh
-RUN curl -L http://cpanmin.us | perl - Mojolicious::Plugin::AccessLog
 VOLUME /var/log/docker
 ADD . /srv/www
 
