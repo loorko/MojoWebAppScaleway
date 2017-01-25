@@ -1,7 +1,7 @@
 # Inherit from the Ubuntu Trusty image by Scaleway.
 #   This image contains some Scaleway specific scripts
 #   See https://github.com/scaleway/image-ubuntu/blob/master/14.04/Dockerfile
-FROM scaleway/ubuntu:xenial
+FROM scaleway/ubuntu:trusty
 MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
 
 # Prepare rootfs for image-builder.
