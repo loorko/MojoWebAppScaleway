@@ -1,4 +1,4 @@
-package MyApp;
+package App;
 use Mojo::Base 'Mojolicious';
 
 sub startup {
