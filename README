@@ -12,6 +12,11 @@ docker inspect --format '{{ .NetworkSettings.IPAddress }}' mojo_web_app
 
 172.17.0.2:8080
 
+# Configure nginx
+unlink /etc/nginx/sites-enabled/default
+cp ./overlay/etc/nginx/sites-available/aplication /etc/nginx/sites-available/
+ln -s /etc/nginx/sites-available/aplication /etc/nginx/sites-enabled/
+
 mv etc/nginx/sites-available/apllication.conf /etc/nginx/sites-available/apllication.conf
 
 cp -i apllication.conf /etc/nginx/sites-available/
