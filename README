@@ -10,5 +10,11 @@ docker run -p 8080 -t -i --name mojo_web_app mojo-web-app
 
 docker inspect --format '{{ .NetworkSettings.IPAddress }}' mojo_web_app
 
-in the browser
 172.17.0.2:8080
+
+mv etc/nginx/sites-available/apllication.conf /etc/nginx/sites-available/apllication.conf
+
+cp -i apllication.conf /etc/nginx/sites-available/
+
+ln -sf /etc/nginx/sites-available/apllication.conf /etc/nginx/sites-enabled/apllication.conf
+rm -f /etc/nginx/sites-enabled/default
