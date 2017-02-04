@@ -34,8 +34,15 @@ Probably you get:
 curl 172.17.0.2:8080
 
 ```
-You get an HTML answer.
-
+You get an HTML answer, somhting like this:
+```
+<!DOCTYPE html>
+<html>
+  <head><title>Welcome</title></head>
+  <body><h1>Mojolicious</h1>
+</body>
+</html>
+```
 ## Nginx
 ### Install Nginx to the server
 ```
