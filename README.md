@@ -49,10 +49,13 @@ You get an HTML answer, somhting like this:
 apt-get install nginx
 ```
 ### Configure nginx
+```
 unlink /etc/nginx/sites-enabled/default
 cp ./etc/nginx/sites-available/application /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/application /etc/nginx/sites-enabled/
-
+```
 ### If you wanna restore the default operations
+```
 unlink /etc/nginx/sites-enabled/application
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+```
