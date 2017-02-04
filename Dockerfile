@@ -2,7 +2,8 @@
 #   This image contains some Scaleway specific scripts
 #   See https://github.com/scaleway/image-ubuntu/blob/master/14.04/Dockerfile
 FROM scaleway/ubuntu:trusty
-MAINTAINER Scaleway <opensource@scaleway.com> (@scaleway)
+MAINTAINER Roland Goreczky
+ENV REFRESHED_AT 2017-02-03
 
 # Prepare rootfs for image-builder.
 #   This script prevent aptitude to run services when installed
