@@ -53,12 +53,15 @@ apt-get install nginx
 unlink /etc/nginx/sites-enabled/default
 cp .overlay/etc/nginx/sites-available/application /etc/nginx/sites-available/
 ln -s /etc/nginx/sites-available/application /etc/nginx/sites-enabled/
+nginx -s reload
 ```
+
+# And finally
+Go to < your scaleway server ip >, and enjoy it.
+
 ### If you wanna restore the default operations
 ```
 unlink /etc/nginx/sites-enabled/application
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 nginx -s reload
 ```
-# And finally
-Go to < your scaleway server ip >, and enjoy it.
