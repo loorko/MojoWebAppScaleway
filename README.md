@@ -58,6 +58,7 @@ ln -s /etc/nginx/sites-available/application /etc/nginx/sites-enabled/
 ```
 unlink /etc/nginx/sites-enabled/application
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+nginx -s reload
 ```
 # And finally
 Go to < your scaleway server ip >, and enjoy it.
