@@ -1,6 +1,6 @@
 # How to run Mojolicious app on Scaleway
 
-This page show you how to run Mojolicious app on Scaleway.
+This page show you how to run a [Mojolicious](http://mojolicious.org/) app on [Scaleway](https://www.scaleway.com/) in a [Docker](https://www.docker.com/) container.
 
 ## Requirements
  * You have an account and are logged into cloud.scaleway.com
